@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giỏ hàng - Táo Vàng</title>
+  <link rel="stylesheet" href="shop.css"/>
+</head>
+<body>
+
+<header>
+  <h1>Giỏ hàng</h1>
+  <a href="shop.html" class="cart-icon">← Tiếp tục mua sắm</a>
+</header>
+
+<section class="cart">
+  <ul id="cart-items"></ul>
+  <p id="total">Tổng: 0 ₫</p>
+</section>
+
+<section class="checkout-section">
+  <h2>Thông tin nhận hàng</h2>
+  <form id="checkout-form">
+    <input type="text" id="name" placeholder="Họ và tên" required>
+    <input type="tel" id="phone" placeholder="Số điện thoại" required>
+    <input type="text" id="address" placeholder="Địa chỉ nhận hàng" required>
+
+    <label>Phương thức thanh toán:</label>
+    <div class="payment-methods">
+      <label><input type="radio" name="payment" value="COD" checked> Thanh toán khi nhận hàng (COD)</label><br>
+      <label><input type="radio" name="payment" value="Bank"> Chuyển khoản ngân hàng</label>
+    </div>
+
+    <button type="submit" class="checkout-button">Xác nhận thanh toán</button>
+  </form>
+</section>
+
+<script src="giohang.js"></script>
+</body>
+</html>

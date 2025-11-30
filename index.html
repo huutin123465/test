@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Táo Vàng - iPhone Chính Hãng</title>
+  <link rel="stylesheet" href="shop.css"/>
+</head>
+<body>
+<header>
+  <h1>Táo Vàng</h1>
+  <p>Chuyên iPhone chính hãng - Giá tốt, bảo hành uy tín </p>
+  
+  <a href="#" class="login-link" onclick="openLoginForm()">Đăng nhập / Đăng ký</a>
+  
+  <a href="giohang.html" class="cart-icon">🛒 Giỏ hàng</a>
+</header>
+
+<section class="search-bar">
+  <input type="text" id="searchInput" placeholder="Tìm iPhone..." oninput="searchProducts()" />
+</section>
+
+<main class="container" id="productList">
+  <div class="product"
+  data-name="iPhone 15 Pro Max"
+  data-price="29990000"
+  data-description="Màn hình Super Retina XDR 6.7 inch, chip A17 Pro, camera 48MP, pin trâu, khung titanium."
+  data-screen="Super Retina XDR 6.7 inch"
+  data-chip="A17 Pro"
+  data-camera="48MP"
+  data-battery="Pin trâu, sử dụng lâu dài"
+  data-frame="Titanium cao cấp">
+<img src="https://cdn.tgdd.vn/Products/Images/42/305659/iphone-15-pro-max-blue-thumbnew-600x600.jpg" alt="iPhone 15" />
+<h3>iPhone 15 Pro Max</h3>
+<p class="price">29.990.000₫</p>
+<button class="buy-button" onclick="addToCart(this)">Thêm vào giỏ hàng</button>
+<button class="buy-button" onclick="showProductDetail(this)">Xem chi tiết</button>
+</div>
+
+<div class="product"
+data-name="iPhone 14 Plus"
+data-price="24990000"
+data-description="Màn hình Super Retina XDR 6.7 inch, chip A15 Bionic, camera 12MP, pin 4325mAh, khung nhôm."
+data-screen="Super Retina XDR 6.7 inch"
+data-chip="A15 Bionic"
+data-camera="12MP"
+data-battery="Pin 4325mAh, sử dụng lâu dài"
+data-frame="Khung nhôm cao cấp">
+<img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/p/h/photo_2022-09-28_21-58-51_5.jpg" alt="iPhone 14 Plus" />
+<h3>iPhone 14 Plus</h3>
+<p class="price">24.990.000₫</p>
+<button class="buy-button" onclick="addToCart(this)">Thêm vào giỏ hàng</button>
+<button class="buy-button" onclick="showProductDetail(this)">Xem chi tiết</button>
+</div>
+
+<div class="product"
+data-name="iPhone 13"
+data-price="19990000"
+data-description="Màn hình Super Retina XDR 6.1 inch, chip A15 Bionic, camera kép 12MP, pin 3240mAh, khung nhôm."
+data-screen="Super Retina XDR 6.1 inch"
+data-chip="A15 Bionic"
+data-camera="Camera kép 12MP"
+data-battery="Pin 3240mAh, sử dụng ổn định cả ngày"
+data-frame="Khung nhôm chuẩn hàng không">
+<img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/t/r/tr_ng_5.jpg" alt="iPhone 13" />
+<h3>iPhone 13</h3>
+<p class="price">19.990.000₫</p>
+<button class="buy-button" onclick="addToCart(this)">Thêm vào giỏ hàng</button>
+<button class="buy-button" onclick="showProductDetail(this)">Xem chi tiết</button>
+</div>
+
+<div class="product"
+data-name="iPad Pro M2 12.9 inch"
+data-price="33990000"
+data-description="Màn hình Liquid Retina XDR 12.9 inch, chip Apple M2 mạnh mẽ, hỗ trợ Apple Pencil thế hệ 2, pin 10758mAh, khung nhôm."
+data-screen="Liquid Retina XDR 12.9 inch"
+data-chip="Apple M2"
+data-camera="Camera chính 12MP, góc siêu rộng 10MP, LiDAR Scanner"
+data-battery="Pin 10758mAh, sử dụng lên đến 10 giờ"
+data-frame="Khung nhôm nguyên khối cao cấp">
+<img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/x/_/x_mmmms_7.jpg" alt="iPad Pro M2" />
+<h3>iPad Pro M2 12.9 inch</h3>
+<p class="price">33.990.000₫</p>
+<button class="buy-button" onclick="addToCart(this)">Thêm vào giỏ hàng</button>
+<button class="buy-button" onclick="showProductDetail(this)">Xem chi tiết</button>
+</div>
+
+<div class="product"
+data-name="iPad Air 5 WiFi 64GB"
+data-price="12990000"
+data-description="Màn hình Liquid Retina 10.9 inch, chip Apple M1 mạnh mẽ, hỗ trợ Apple Pencil thế hệ 2, pin dùng đến 10 giờ, khung nhôm cao cấp."
+data-screen="Liquid Retina 10.9 inch"
+data-chip="Apple M1"
+data-camera="Camera chính 12MP, camera trước 12MP góc siêu rộng"
+data-battery="Pin sử dụng lên đến 10 giờ"
+data-frame="Khung nhôm nguyên khối cao cấp">
+  <img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/5/_/5_158_4.jpg" alt="iPad Air 5" />
+  <h3>iPad Air 5 WiFi 64GB</h3>
+  <p class="price">12.990.000₫</p>
+  <button class="buy-button" onclick="addToCart(this)">Thêm vào giỏ hàng</button>
+  <button class="buy-button" onclick="showProductDetail(this)">Xem chi tiết</button>
+</div>
+
+<div class="product"
+data-name="iPhone 15 Plus"
+data-price="21990000"
+data-description="Màn hình Super Retina XDR 6.7 inch, chip A16 Bionic mạnh mẽ, camera kép 48MP + 12MP, pin sử dụng lên đến 26 giờ, khung nhôm cao cấp."
+data-screen="Super Retina XDR 6.7 inch"
+data-chip="A16 Bionic"
+data-camera="Camera chính 48MP, camera góc rộng 12MP"
+data-battery="Pin sử dụng lên đến 26 giờ"
+data-frame="Khung nhôm nguyên khối cao cấp">
+<img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/i/p/iphone-15-plus-update-04_7.png" alt="iPhone 15 Plus" />
+<h3>iPhone 15 Plus</h3>
+<p class="price">21.990.000₫</p>
+<button class="buy-button" onclick="addToCart(this)">Thêm vào giỏ hàng</button>
+<button class="buy-button" onclick="showProductDetail(this)">Xem chi tiết</button>
+</div>
+
+<div class="product"
+data-name="iPhone SE 2022"
+data-price="9990000"
+data-description="Màn hình Retina IPS LCD 4.7 inch, chip Apple A15 Bionic mạnh mẽ, hỗ trợ 5G, camera 12MP, pin sử dụng lên đến 15 giờ, khung nhôm cao cấp."
+data-screen="Retina IPS LCD 4.7 inch"
+data-chip="Apple A15 Bionic"
+data-camera="Camera chính 12MP, camera trước 7MP"
+data-battery="Pin sử dụng lên đến 15 giờ"
+data-frame="Khung nhôm nguyên khối cao cấp">
+<img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/t/r/tr_nghyju_1_1.png" alt="iPhone SE 2022" />
+<h3>iPhone SE 2022</h3>
+<p class="price">9.990.000₫</p>
+<button class="buy-button" onclick="addToCart(this)">Thêm vào giỏ hàng</button>
+<button class="buy-button" onclick="showProductDetail(this)">Xem chi tiết</button>
+</div>
+
+<div class="product"
+data-name="MacBook Air M2 2022"
+data-price="34990000"
+data-description="Màn hình Liquid Retina 13.6 inch, chip Apple M2 mạnh mẽ, RAM 8GB, ổ cứng SSD 256GB, pin sử dụng lên đến 18 giờ, khung nhôm cao cấp."
+data-screen="Liquid Retina 13.6 inch"
+data-chip="Apple M2"
+data-ram="8GB"
+data-storage="256GB SSD"
+data-battery="Pin sử dụng lên đến 18 giờ"
+data-frame="Khung nhôm nguyên khối cao cấp">
+<img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook_air_m2_2_1_1_6_1.jpg" alt="MacBook Air M2 2022" />
+<h3>MacBook Air M2 2022</h3>
+<p class="price">34.990.000₫</p>
+<button class="buy-button" onclick="addToCart(this)">Thêm vào giỏ hàng</button>
+<button class="buy-button" onclick="showProductDetail(this)">Xem chi tiết</button>
+</div>
+
+<div class="product"
+     data-name="MacBook Pro 14 inch M3 2023"
+     data-price="38900000"
+     data-description="Màn hình Liquid Retina XDR 14.2 inch, chip Apple M3 8 nhân, GPU 10 nhân, RAM 8GB, SSD 512GB, pin sử dụng lên đến 22 giờ, khung nhôm cao cấp."
+     data-screen="Liquid Retina XDR 14.2 inch"
+     data-chip="Apple M3"
+     data-gpu="GPU 10 nhân"
+     data-ram="8GB"
+     data-storage="512GB SSD"
+     data-battery="Pin sử dụng lên đến 22 giờ"
+     data-frame="Khung nhôm nguyên khối cao cấp">
+  <img src="https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/m/a/macbook_air_m2_2_1_1_6_1.jpg" alt="MacBook Pro 14 inch M3 2023" />
+  <h3>MacBook Pro 14 inch M3 2023</h3>
+  <p class="price">38.900.000₫</p>
+  <button class="buy-button" onclick="addToCart(this)">Thêm vào giỏ hàng</button>
+  <button class="buy-button" onclick="showProductDetail(this)">Xem chi tiết</button>
+</div>
+
+<div class="product"
+     data-name="MacBook Air M1 2020"
+     data-price="24990000"
+     data-description="Màn hình Retina 13.3 inch, chip Apple M1 mạnh mẽ, RAM 8GB, SSD 256GB, pin sử dụng lên đến 15 giờ, khung nhôm cao cấp."
+     data-screen="Retina 13.3 inch"
+     data-chip="Apple M1"
+     data-ram="8GB"
+     data-storage="256GB SSD"
+     data-battery="Pin sử dụng lên đến 15 giờ"
+     data-frame="Khung nhôm nguyên khối cao cấp">
+  <img src="https://cdn2.cellphones.com.vn/358x/media/catalog/product/g/o/gold_1_5.png" alt="MacBook Air M1 2020" />
+  <h3>MacBook Air M1 2020</h3>
+  <p class="price">24.990.000₫</p>
+  <button class="buy-button" onclick="addToCart(this)">Thêm vào giỏ hàng</button>
+  <button class="buy-button" onclick="showProductDetail(this)">Xem chi tiết</button>
+</div>
+
+</main>
+
+<section class="contact">
+  <h2>Liên hệ với chúng tôi</h2>
+  <p>📞 Hotline: <a href="tel:0999999999">0999 999 999</a></p>
+  <p>📧 Email: <a href="mailto:hotro@taovang.vn">hotro@taovang.vn</a></p>
+  <p>🏠 Địa chỉ: 123 Đường Táo Vàng, Quận 1, TP.HCM</p>
+
+  <form id="contact-form">
+    <input type="text" placeholder="Họ và tên" required>
+    <input type="email" placeholder="Email của bạn" required>
+    <textarea placeholder="Nội dung liên hệ..." rows="5" required></textarea>
+    <button type="submit">Gửi liên hệ</button>
+  </form>
+</section>
+
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeLoginForm()">&times;</span>
+    <h2 id="modalTitle">Đăng nhập</h2>
+    <div id="loginForm">
+      <input type="text" placeholder="Tên đăng nhập" required />
+      <input type="password" placeholder="Mật khẩu" required />
+      <button class="buy-button" onclick="login()">Đăng nhập</button>
+      <p>Chưa có tài khoản? <a href="javascript:void(0);" onclick="showRegisterForm()">Đăng ký</a></p>
+    </div>
+    <div id="registerForm" style="display: none;">
+      <input type="text" placeholder="Tên đăng nhập" required />
+      <input type="password" placeholder="Mật khẩu" required />
+      <input type="email" placeholder="Email" required />
+      <button class="buy-button" onclick="register()">Đăng ký</button>
+      <p>Đã có tài khoản? <a href="javascript:void(0);" onclick="showLoginForm()">Đăng nhập</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="chatbox">
+  <div class="chat-header">Hỗ trợ khách hàng</div>
+  <div class="chat-body">
+    <p>Xin chào! Bạn cần hỗ trợ gì?</p>
+  </div>
+  <input type="text" placeholder="Nhập tin nhắn..." />
+</div>
+
+<footer>
+  <p>&copy; 2025 Táo Vàng. All rights reserved.</p>
+</footer>
+
+<div id="productDetailModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeProductDetail()">&times;</span>
+    <h2 id="detailTitle"></h2>
+    <img id="detailImage" src="" alt="" style="max-width: 100%; height: auto; margin: 10px 0;" />
+    <p id="detailPrice" class="price"></p>
+    <p id="detailDescription"></p>
+  <p><strong>Màn hình:</strong> <span id="detailScreen"></span></p>
+  <p><strong>Chip:</strong> <span id="detailChip"></span></p>
+  <p><strong>Camera:</strong> <span id="detailCamera"></span></p>
+  <p><strong>Pin:</strong> <span id="detailBattery"></span></p>
+  <p><strong>Khung:</strong> <span id="detailFrame"></span></p>
+  <button onclick="closeProductDetail()">Đóng</button>
+  </div>
+</div>
+
+<script src="shop.js"></script>
+</body>
+</html>
