@@ -35,6 +35,23 @@
   </form>
 </section>
 
+<!-- POPUP -->
+<div id="orderSuccessModal" class="modal">
+  <div class="modal-content">
+    <h2 style="color:green;">✔ Đã thanh toán thành công!</h2>
+
+    <h3>Danh sách sản phẩm:</h3>
+    <div id="orderProducts"></div>
+
+    <h3>Thông tin đơn hàng:</h3>
+    <p id="orderInfo"></p>
+
+    <button onclick="goHome()" class="checkout-button" style="margin-top:15px;">
+      Trở về trang chủ
+    </button>
+  </div>
+</div>
+
 <script src="giohang.js"></script>
 </body>
 </html>
