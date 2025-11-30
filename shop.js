@@ -44,26 +44,29 @@ function register() {
   }
 }
 
+/* ✅ THÊM SẢN PHẨM VÀO GIỎ + LƯU HÌNH ẢNH */
 function addToCart(button) {
   const product = button.closest('.product');
-  const productName = product.querySelector('h3').textContent;
-  const productPrice = product.querySelector('.price').textContent.replace(/[₫.]/g, '').trim();
+  const name = product.getAttribute('data-name');
+  const price = parseInt(product.getAttribute('data-price'));
+  const image = product.querySelector("img").src;
 
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  const existingProductIndex = cart.findIndex(item => item.name === productName);
-  if (existingProductIndex > -1) {
-    cart[existingProductIndex].quantity += 1;
+  const exists = cart.find(item => item.name === name);
+  if (exists) {
+    exists.quantity++;
   } else {
     cart.push({
-      name: productName,
-      price: parseInt(productPrice),
-      quantity: 1
+      name,
+      price,
+      quantity: 1,
+      image
     });
   }
 
-  localStorage.setItem('cart', JSON.stringify(cart));
-  alert(`${productName} đã được thêm vào giỏ hàng!`);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert(`${name} đã được thêm vào giỏ hàng!`);
 }
 
 function searchProducts() {
