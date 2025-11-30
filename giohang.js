@@ -8,9 +8,17 @@ function updateCart() {
 
   cart.forEach(item => {
     const li = document.createElement("li");
-    li.textContent = `${item.name} - ${item.price.toLocaleString()}₫`;
+    li.classList.add("cart-item");
+
+    li.innerHTML = `
+      <img src="${item.image}" alt="${item.name}" class="cart-image"/>
+      <div class="cart-info">
+        <p>${item.name}</p>
+        <p>${item.price.toLocaleString()}₫ x ${item.quantity}</p>
+      </div>
+    `;
     cartList.appendChild(li);
-    total += item.price;
+    total += item.price * item.quantity;
   });
 
   totalDisplay.textContent = `Tổng: ${total.toLocaleString()}₫`;
@@ -18,15 +26,6 @@ function updateCart() {
 
 document.addEventListener("DOMContentLoaded", () => {
   updateCart();
-
-  const contactForm = document.getElementById("contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      alert("Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm.");
-      contactForm.reset();
-    });
-  }
 
   const checkoutForm = document.getElementById("checkout-form");
   if (checkoutForm) {
@@ -44,15 +43,26 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const total = cart.reduce((sum, item) => sum + item.price, 0);
+      const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-      alert(
-        `✅ Đặt hàng thành công!\n\nKhách: ${name}\nSĐT: ${phone}\nĐịa chỉ: ${address}\nThanh toán: ${payment}\nTổng: ${total.toLocaleString()}₫\n\nCảm ơn bạn đã mua hàng tại Táo Vàng!`
-      );
+      // Hiển thị thông báo thanh toán thành công
+      const checkoutSection = document.querySelector(".checkout-section");
+      checkoutSection.innerHTML = `
+        <h2>✅ Đã thanh toán thành công!</h2>
+        <p>Khách: ${name}</p>
+        <p>SĐT: ${phone}</p>
+        <p>Địa chỉ: ${address}</p>
+        <p>Thanh toán: ${payment}</p>
+        <p>Tổng: ${total.toLocaleString()}₫</p>
+        <button id="homeButton" class="buy-button">← Quay về trang chủ</button>
+      `;
+
+      document.getElementById("homeButton").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
 
       localStorage.removeItem("cart");
       updateCart();
-      checkoutForm.reset();
     });
   }
 });
